@@ -3,7 +3,7 @@ tooling base for il2cpp unity game.
 # sample code that randomly selects player ships.
 - finds component system class instance via pattern matching
 - filters Player game objects and picks random player
-- creates an instance of DTO object using mono activator fn exported by il2cpp
+- creates an instance of ShipSelectRequest DTO object using mono activator fn exported by il2cpp
 - sends the ShipSelectRequest to the server using the network session object found via pattern matching
 
 ```rust
