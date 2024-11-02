@@ -1,0 +1,3 @@
+[submodule "il2cppinterop"]
+	path = il2cppinterop
+	url = https://github.com/acard0/il2cppinterop
