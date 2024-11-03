@@ -1,4 +1,4 @@
-tooling base for il2cpp unity game.
+orbitresolver is a tooling base for il2cpp unity game.
 
 # sample code that randomly selects player ships.
 - finds component system class instance via pattern matching
