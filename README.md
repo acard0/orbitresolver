@@ -7,17 +7,17 @@ orbitresolver is a tooling base for il2cpp unity game.
 - sends the ShipSelectRequest to the server using the network session object found via pattern matching
 
 # building
-install rustup, cargo and rustc via installer > https://www.rust-lang.org/tools/install
-install nightly toolchain > cmd 'rustup toolchain install nightly'
-add target to 32bit set > cmd 'rustup target add i686-pc-windows-msvc --toolchain nightly'
-clone the repo
-open up your editor or cmd window at source directory (where root Cargo.toml file is)
-build > cmd 'cargo build --release'
-output library will be at 'target\i686-pc-windows-msvc\release'
+- install rustup, cargo and rustc via installer > https://www.rust-lang.org/tools/install
+- install nightly toolchain > cmd 'rustup toolchain install nightly'
+- add target to 32bit set > cmd 'rustup target add i686-pc-windows-msvc --toolchain nightly'
+- clone the repo
+- open up your editor or cmd window at source directory (where root Cargo.toml file is)
+- build > cmd 'cargo build --release'
+- output library will be at 'target\i686-pc-windows-msvc\release'
 
 # testing
-open up an injector and inject the built library
-if you are using ProcessHacker, find darkorbit.exe from process tree > misc > inject dll
+- open up an injector and inject the built library
+- if you are using ProcessHacker, find darkorbit.exe from process tree > misc > inject dll
 
 ```rust
 #![allow(non_snake_case)]
