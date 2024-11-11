@@ -6,6 +6,19 @@ orbitresolver is a tooling base for il2cpp unity game.
 - creates an instance of ShipSelectRequest DTO object using mono activator fn exported by il2cpp
 - sends the ShipSelectRequest to the server using the network session object found via pattern matching
 
+# building
+install rustup, cargo and rustc via installer > https://www.rust-lang.org/tools/install
+install nightly toolchain > cmd 'rustup toolchain install nightly'
+add target to 32bit set > cmd 'rustup target add i686-pc-windows-msvc --toolchain nightly'
+clone the repo
+open up your editor or cmd window at source directory (where root Cargo.toml file is)
+build > cmd 'cargo build --release'
+output library will be at 'target\i686-pc-windows-msvc\release'
+
+# testing
+open up an injector and inject the built library
+if you are using ProcessHacker, find darkorbit.exe from process tree > misc > inject dll
+
 ```rust
 #![allow(non_snake_case)]
 #![allow(unused)]
@@ -82,7 +95,7 @@ fn select_ship(session: &mut Session, unit: &Unit) -> bool { unsafe {
 
 fn move_hero(session: &mut Session, world_x: i32, world_y: i32) -> bool { unsafe {
 // il2cppinterop_core::mono::definitions::object::new_from_namespace("Game.MoveRequest")
-            .expect("Failed to create Game.MoveRequest")
+//          .expect("Failed to create Game.MoveRequest")
     let request = MoveRequest::new()
         .set_target_x(world_x).set_target_y(world_y)
         /*.set_position_x(val).set_position_y(val)*/; // these should be set for proper request, user interaction points
